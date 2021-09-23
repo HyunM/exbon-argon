@@ -32,7 +32,7 @@ import {
 
 import Header from "components/Headers/Header.js";
 
-const Dashboard = (props) => {
+const Dashboard = props => {
   const [activeNav, setActiveNav] = React.useState(1);
   const [chartExample1Data, setChartExample1Data] = React.useState("data1");
 
@@ -69,7 +69,7 @@ const Dashboard = (props) => {
                             active: activeNav === 1,
                           })}
                           href="#pablo"
-                          onClick={(e) => toggleNavs(e, 1)}
+                          onClick={e => toggleNavs(e, 1)}
                         >
                           <span className="d-none d-md-block">Month</span>
                           <span className="d-md-none">M</span>
@@ -82,7 +82,7 @@ const Dashboard = (props) => {
                           })}
                           data-toggle="tab"
                           href="#pablo"
-                          onClick={(e) => toggleNavs(e, 2)}
+                          onClick={e => toggleNavs(e, 2)}
                         >
                           <span className="d-none d-md-block">Week</span>
                           <span className="d-md-none">W</span>
@@ -98,7 +98,7 @@ const Dashboard = (props) => {
                   <Line
                     data={chartExample1[chartExample1Data]}
                     options={chartExample1.options}
-                    getDatasetAtEvent={(e) => console.log(e)}
+                    getDatasetAtEvent={e => console.log(e)}
                   />
                 </div>
               </CardBody>
@@ -140,7 +140,7 @@ const Dashboard = (props) => {
                     <Button
                       color="primary"
                       href="#pablo"
-                      onClick={(e) => e.preventDefault()}
+                      onClick={e => e.preventDefault()}
                       size="sm"
                     >
                       See all
@@ -216,7 +216,7 @@ const Dashboard = (props) => {
                     <Button
                       color="primary"
                       href="#pablo"
-                      onClick={(e) => e.preventDefault()}
+                      onClick={e => e.preventDefault()}
                       size="sm"
                     >
                       See all
